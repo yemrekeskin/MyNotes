@@ -1,0 +1,295 @@
+
+## Kavramlar
+
+ 1. Onus (On-Us) --> Üzerimizde --> Takasa konu olmayan işlem
+    - Kullanılan kart ile işlem yapan Pos un aynı banka olma durumunda kullanılır,
+    - ATM den para çekiyorsanız,  kartın bankası ile ATM bankasının aynı olması durumunda da kullanılır,
+	
+ 2. Not Onus (Not-On-Us) --> Üzerimizde değil --> Takasa konu olan işlem
+	- Kullanılan kart ile işlem yapan pos veya atm bankasının aynı banka olmaması durumu
+	- Bir işlem Not Onus ise işlemin mutabakatı takas üzerinden yapılır,
+	- Kart bankası komisyon alan taraf olur,
+	- İşlem yapılan POS veya ATM bankasının kart bankasına bir ücret ödemesi gerekir,
+	- Bu işlemlerde kart bankası bir komisyon aldığı için avantajlı görünebilir,
+	  Ancak işlem yapan müşterinin kart ekstresini 15-40 gün aralığında ödeyecek olması ya da borcunu geciktirmesi riski mevcuttur.
+	
+ 3. POS --> Fiziki Pos , Sanal POS --> Eticaret siteleri
+    --> Ürün satan veya hizmet sunan iş yerlerindeki 
+ 
+ 4. İptal
+    - Gün içinde yapılan bir işlemi iptal etmek için kullanılır. 
+	- İptal edilen işlemler finansal bir değer kazanmazlar ve müşteri ekstresinde hiçbir şekilde görünmezler. 
+	- İptal işleminin ardından müşterinin kredi kartının limiti de en geç gün sonunda olmak üzere işlem tutarı oranında arttırılır.
+	
+ 5. İade  
+    - Muhasebeleşmiş bir işlem tutarının kart sahibi hesabına geri aktarılması durumunda kullanılır,	
+	- Kart ekstresinde ayrı bir işlem olarak görünür,
+	- İade edilen işlemin ekstre kaydı silinmez,
+	- İade işlemi ancak gün sonu kapatıldıktan sonra gerçekleştirilebilir.
+
+ 6. İptal - İade
+    - İptal ve iade işlemi arasındaki teknik fark işlemin zamanıdır. 
+	- Banka sanal POS’ unda gün sonuna girmiş/muhasebeleşmiş işlem sadece “İade” edilebilir. 
+	- Henüz gün sonuna girmemiş/muhasebeleşmemiş işlemler ise “İptal” edilebilir.
+	- Gün içerisinde iptal,  sonraki günlerde iade yapılır,
+	- Her bankanın ve her üye iş yerinin gün sonu saati farklı, nasıl yöneteceğim ?
+	  - ilk önce iptal denenir, hata alınırsa iade sürecine girilir
+	- Bir işlemi iptal etmek yerine muhasebeleştikten sonra iade ederseniz,kart sahibi işlem tutarını aynı gün değil 
+	  kredi kartı için ortalama 1–3 iş günü, 
+	  debit kartlar(bankamatik kartları) için ortalama 7–14 iş günü içerisinde alır. 
+	
+ 7. Debit kart - Bankamatik Kartları
+ 8. Chargeback - Harcama İtirazı
+               - Kart sahibi bankanın işlem tutarını, üye iş yeri bankasından geri alma hakkı,
+			   - Ters İbraz
+ 9. E-Ticaret Hacmi --> Kartlı ödemeler, EFT/Havale, kapıda ödeme
+ 
+ 10. Unbanked population --> 
+     Underbanked population -->
+	 Banked population --> 
+	 
+ 11. Installments  --> Taksit
+     CardHolder    --> Kart hamili
+	 Issuer Bank   --> Veren Banka 
+	 Acquirer Bank --> Alicinin Bankası
+	 Issuing       --> Kart çıkaran banka
+	 Acquiring     --> Otorizasyon Veren Banka
+	 
+	 Kredi/Banka Kartı --> Tahsilat ve Borçlanma aracı
+	 
+ 12. 3D Secure - GO
+ 
+ ## Kart Hamili(Sorumlu) --> Kartın adına tahsis edildiği kişidir. Kart Sahibi
+	Kartı fiilen kimin kullanıyor olduğuna bakılmaksızın, kullanımından doğan tüm sonuçlardan kart hamili sorumludur.
+	Yalnızca, korsan dijital eylemler neticesinde ortaya çıkan mağduriyet durumlarında gerekli soruşturma yapılarak, 
+	sorumluluk kart hamilinden alınabilir. 
+ 
+
+ 13. OFFILINE SATIS
+     - EMV  - Europay,MasterCard,Visa
+     - Riskin Kart tarafından yönetilmesi
+	 - Daha hızlı işelm yapabilme ve onay vermek için
+	 - Daha az güvenli ve fraud riski daha yüksektir
+	 - Offline işlem limit 
+	 - POS üzerinde tanımlanan iş yeri limiti = floor limit = Floor Limit, pos cihazı üzerinde tutulan ve 
+	   offline satış yapılabilecek maksimum tutarı yöneten limittir.
+	 - Pos üzerinde ise; 
+	    - offline işlem adedi, 
+		- toplam offline işlem tutarı 
+		- offline işlem süresi ile ilgili sınırlamalar mevcuttur.
+	 - Temaslı/Temazsız Offline işlemler
+	    - Temaslı Offline İşlem 
+			- Offline EMV işlemlerde onay aşamasında işlem kart ve POS bankasına gitmez.
+			- Bu işlemler pos cihazı tarafından pos bankası sistemine belirli periyotlarla gönderilir.
+			- POS’un üzerinde tanımlı Floor limit tutarından daha düşük tutarda işlem yapılması ve ,
+			  kartın da offline otorizasyona izin vermesi durumunda temaslı offline satış gerçekleşebilir. 
+		- Temassız Offline işlem
+		    - Contactless Limit, CVM Limiti ve Floor limit kontrol edilir.
+			- Contactless Limit; Bir işlemin temassız olarak yapılabileceği üst limiti ifade eder
+			- Cvm Limit ise kart doğrulamasının yapılacağı alt limiti ifade eder.
+ 
+
+ ## Kredi Kartı - Credit Kart
+    - Kredi kartı, bankaların belirli bir limitle verdiği para olmadan alışveriş 
+	  yapmaya olanak sağlayan ödeme aracıdır.,
+	- Ödeme ve borçlanma aracıdır,
+	- Limit - üst harcama miktarı,
+	- Lİmit Aşımı ???
+	- Ekstre Döneminin sonunda 
+		- Borcunun tamamını ödeyen müşteri --> İyi müşteri değildir,
+		- Borcunun asgarisini ödeyen müşteri --> İyi müşteridir,
+		- Bnakalar kalan tutar üzerinden işleyen faiz bankanın karıdır,
+	- Ekstre Bilgileri 
+	    - Son Ödeme Tarihi
+		- Hesap Kesim Tarihi
+		- Asgari Ödeme Tutarı --> asgari ödendiğinde kalan tutar üzerinden faiz işletilir,
+		   - Kart Limiti 1 – 14.999 TL      --> %30
+		   - Kart Limiti 15.000 – 19.999 TL --> %35
+		   - 20.000 - üzeri                 --> %40
+		- Faizler 
+			- Nakit Çekim Faizi
+			- Gecikme Faizi
+			- Alışveriş Faizi
+
+ ## Banka Kartı - Debit Kart
+	- Herhangi bir bankadan çıkarılmış, Hesap üzerine tanımlanmış karttır,
+	- Banka kartınızın olabilmesi için bir banka hesabınızın olması gerekir,
+	- 
+	
+ 15.TROY
+	- Türk Ulusal Ödeme Yöntemi
+	- 979200-979289 Bin aralığında
+	- One Time Password – OTP - Tek kullanımlık doğrulama sistemi,
+	- Troy GO - Güvenli Öde
+	- GO altyapısını kullanabilmesi için POS cihazının 3D Secure altyapısını desteklemesi gerekiyor,
+	- OTP ile fraud nedeni ile oluşabilecek Chargeback riskinden korur,
+
+ ## Kavramlar Devam
+	- MasterCard --> Maestro
+	- Visa --> Visa Elektron
+
+
+ ## BSMV - Banka Sigorta Muamele Vergisi
+    - Bankaların gerçekleştirmekte olduğu bazı işlemlerden dolayı ödemekte olduğu vergi türüdür,
+	- Bazı istinalar dışında müşterilere de yansıtılmaktadır,
+ 
+ ## KKDF - Kaynak Kullanımını Destekleme Fonu
+
+ ## 3D Secure 
+	- Alışveriş sırasında kartın fiziki olarak ibraz edilmesi yöntemi (card present),
+	- Fiziki olarak kartın ibraz edilmesi mümkün olmayan mesafeli işlemler yöntemi(card not present).
+	- 3 Domain (3D) Secure Protokolü
+	- SSL (Secure Socket Layer) 
+	- Internet üzerinden yapılan alışverişlerde kart sahibi kimliği şifre vasıtasıyıla doğrulayan ve
+		XML mesajlarını SSL üzerinden gönderilmesini sağlayan bir güvenlik protokolü,
+	- Tam 3D Secure ( Full 3D Secure ) işlemler – Kart sahibi 3D Secure, İşyeri 3D Secure
+	- Yarım 3D Secure (Merchant only 3D Secure ) işlemler – sadece işyeri 3D Secure
+	- Bu VISA nın ürettiği bir yaklaşım ve terim VISA ya ait.
+	- Aynı kavrama MasterCard “MasterCard SecureCode” , JCP  “J/Secure”, 
+	  American Express SafeKey demektedir.
+
+ ## Kart -- POS cihazı üzerinden yapılan işlem akışı
+    - 29.05.2020
+		- 100 TL’lik işlem yaptım,
+		- Üye iş yerinin POS cihazı üzerinden gün sonu alması,
+		- POS cihazı hafızadaki tüm işlemleri kendi bankasına gönderilir,
+		POS cihazı ve POS bankası işlemler konusunda mutabakat sağlar,
+	- 30.05.2020
+	    - Üye işyeri Bankası tarafından 100 TL işlem için TAKAS dosyası oluşturularak BKM ye gönderilir, > OUTGOING DOSYASI
+		- BKM kart bankası(issuer) için TAKAS dosyasını oluşturarak kart bankasına gönderir, > INCOMING DOSYASI  
+		- Kart bankası üye iş yeri bankasına takas komisyonu kestikten sonra, 98.77 TL gönderir,
+		  Takas Oranı --> %1.23
+		- Kart bankası kart hami dönem içine 100 TL lik işlem yansıtır,
+		- POS bankası çalışma koşuluna göre üye iş yeri hesabına geçer,
+			- Üye iş yerinin komisyonlu çalıştığını varsayarsak (komisyon 1.6),
+			  üye iş yerinin yapmış olduğu 100 TL lik işlem için işlemin ertesi günü %1.6 komisyon kesilerek 98.4 olarak 
+			  üye iş yerinin cari hesabına yansıtılır,
+		- Kart hamilinin ödemesi yapıp-yapmasına bakılmadan bankalar kendi aralarındaki takas sonucunda üye iş yerinin parası ödenir,
+		- Takas oranı kart bankasının karı olur > 1.23 
+
+ ## Açık Provizyon --> 
+ 	- not onus işlemler de (takasın konu olduğu işlemler de)
+	- Provizyonu alınmış bir işlemin Provizyon anından takas dosyası 
+	  ile kart bankasına gelene kadar ki dönem olarak tanımlanabilir,
+	- Onay bekleyen işlemlere provizyondaki işlemler ya da 
+	  açık provizyon işlemleri denmektedir.
+	- İşlemi, kartınızın bankasına ait bir pos ile yaptı iseniz o pos henüz kapama mesajı göndermemiştir.
+	- İşlemi, kartınızın bankasına ait olmayan, başka bir banka posu ile yaptı iseniz o banka henüz kapama mesajı göndermemiştir. ( takas ).
+	- Bu işlem için ilgili kaynaktan kapama mesajı gelmediği müddetçe provizyon da bekleyecektir.
+	- Başka bir ifadeyle kart işleminin dönemiçine girmeden hemen önce beklediği duraktır. Açık provizyon işlemleri, kart dönemiçine girene kadar finansal değer kazanmazlar.
+	- Bu durum ne zaman meydana gelebilir?
+	- Kartın geçerli bir kart olduğunu anlamak için appStore gibi bazı siteler, küçük meblağlı bir otorizasyon talebi yaparlar 
+	  ve bu talebe alınan onay mesajı ile kartın gerçek bir kart olduğunu anlarlar. Bu tür işlemler için kapama 
+	  gönderilmeyeceğinden işlem müşteri hesabına hiçbir zaman yansımaz. 
+	  Açık provizyonda beklerler. Taki işlem geçerliliğini yitirene kadar ( expire )
+	- Kart ile bir işlem yapar yapmaz, internet şubeden bu işlemi izlemek isterseniz, 
+	  bunu bulacağınız yer açık provizyon ekranıdır. Çünki pos lar gün sonu yapmadan 
+	  işlemler dönemöiçine yansımazlar.
+
+
+ ## HCE - Host Card Emulation 
+    - Mobil cihazların kartları emüle ederek NFC ile temazsız ödeme gerçekleştirmemize yarayan bir teknolojidir,
+	- Böylelikle telefonlar , kartların yerini almış oluyor,
+	- Bulut tabanlı bir yapıdır,
+	- Kart bilgisi telefon üzerinden tutulmaz, bulut üzerinden tutulur,
+	- NFC - Yakın Alan İletişimi - Near-Field Communication
+
+ ## MOTO (Mo/To) - Mail Order Telephone Order 
+	- PCI DSS - Payment Card Industry Data Security Standard
+	- Talimatla yapılan işlem,
+	- Bir iş yeri kartınızdan, kart limitinizi blokelemeden, her ay düzenli bir tutar çekmek istiyorsa,
+	  bunun en sık kullanılan yöntemi MOTO dur,
+	- MOTO işlemler genellikle POS lardaki özel bir menüden yapılır,
+	- MOTO ve Taksitli ödemeden farkları 
+		- 1000 TL lik 10 taksitli işlem yaptığınızda kart limitiniz -1000 olarak güncellenir,
+		- Aynı işlem için moto talimatı verdiğinizde kart limitiniz her ay 100 TL düşer,
+	- MOTO işlemi için , satıcı ve kart sahibi arasında bir sözleşme olmalıdır,
+	- Eğer sizden habersiz bir moto işlemi olduysa bankanız aracılığıyla itiraz edebilirsiniz,
+	- Eğer satıcı ranızdaki sözleşmeyi ispatlayamazsa işlem hesabınıza iade edilir,
+	- Moto talimatı verecekseniz sanal kart bilgilerinizi kullanınız,
+	- Bir işyerine kart bilgilerinizi verdiniz, 3.ayda aranızdaki anlaşma bozuldu. Eğer işyerinin MOTO işlem yapmaya devam etmesini istemiyor iseniz
+		- kartınızı moto işlemlere kapatabilirsiniz
+		- kartınızı moto limitlerini sıfırlayabilirsiniz
+		- kartınızı komple kapatabilirsiniz.
+
+ ## IVR  - Interactive Voice Response (Etkileşimli Sesli Yanıt)
+ 
+ ## CNP: Card Not Present 
+ 	– Kartin fiziksel olarak işlem anında bulunmadığı işlemlerdir.
+	- Mail order islemler, internetten yapılan islemler(sanal pos işlemleri) bu tür işlemlere birer örnektir.
+
+ - Banka Kartı - Nakit Hesap
+ - POS - Point of Sale 
+ - Kredi Kartı Limit Aşımı --> 
+ - KMH - Kredili Mevduat Hesabı -->
+ - End Of Cycle - Dönemİçi 
+ - Ödeme terminaller --> ATM, POS 
+ 
+ - BKM 
+	- Mesela BonusNet bankaları için Garanti, BKM gibi davranır. 
+	  BonusNet Acquirer üyeliği olan A bankasının posundan, 
+	  BonusNet üyesi bir B bankası kartı geçirilmek istendiğinde A bankası Garanti’ye ulaşmakta 
+	  ve B bankasına otorizasyon mesajını Garanti göndermektedir. Tıpkı BKM gibi.
+	- BONUSNET üye bankaları BKM ye uğramadan BKM gibi davranan garanti bankasına uğrarlar,
+	- Direkt MasterCard/VISA bağlantısı olan bankalar da vardır.
+	- BKM, nin yurt içi otorizasyon sürecinde araya girerek, işlemlerin MasterCard/VISA ya 
+	  engellemesinin ülkeye en önemli katkılarından biri, işlem başına  MasterCard/VISA a 
+	  bir bedel ödenmesinin engellemiş olmasıdır.
+	- https://www.bonus.com.tr/bonus-platformu
+
+
+ - HSM - Hardware Security Module
+
+ --> Issuer / Acquier
+	- Issuer  --> İşlemi kabul eden banka
+	- Acquier --> Başka bir bankanın kabul ettiği işleme cevap verendir
+
+ --> On-Us / Not On-Us
+	--> On-Us : kart ile pos un aynı olma durumu
+	--> Not On-US : kart ile pos un farklı olma durumu
+
+# Bir işlem 
+	ISSUER  ON-US --> KART = POS 
+	ACQUIER ON-US --> POS = KART 
+
+	ISSUER  NOT ON-US --> KART != POS 	
+	ACQUIER NOT ON-US --> POS != KART 
+
+# ACQUIER --> Sizin POS unuzda başka bankanın kartı ile işlem 
+# ISSUER  --> 
+
+--> Normal ya da Taksitli Satışta Öteleme 
+	- Kredi Kartı ile  yapılan işlemin örelenmesi
+		- Normal satışlar --> işlemin ekstrenize belirtilen ay yada gün kadar sonra yansıtılması,
+		- Taksitli satışlar -->	taksitlerin vade tarihi hesaplanırken tüm vadelerin belirtiilen gün yada ay kadar kaydırılması demek,
+
+--> Taksit Tutarı Hesaplama	
+	- 10 TL işlem 5 taksit --> taksit tutarı 2
+	- 10 TL işlem 3 taksit 
+		-- eşit taksit tutarı hesaplanır   : 10/3 = 3.333333333333333 --> virgünden sonraki 2 hane alınır : 3.33
+		-- eşit taksit tutarı X taksit adedi : 3.33*3 = 9.99
+		-- toplam tutar arasındaki fark = 10-9.99 = 0.1
+		-- bu fark ilk taksite eklenir = 3.34
+
+--> Çoktan seçmeli taksitli işlem - Selective installement = Vadelendirme biçimi
+	- 1000 TL işlem = 600TL*10 + 400TL*5
+
+--> Limit Aşımı - Limit Aşım Faizi
+
+--> Emboss - Kabartma
+
+
+NOT :
+Smartsoft --> cardtek --> paycore --> Provus
+PayCore   --> now part of BBVA --> s a Spanish multinational financial services company based in Madrid and Bilbao, Spain.
+
+TRIAD --> PayCore Yazılımları 
+    - Konsolidasyon Sistemi
+    - 
+Palmaris --> PayCore yazılımları
+	
+	
+	
+	
+	
+ 

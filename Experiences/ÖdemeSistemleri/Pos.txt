@@ -1,0 +1,136 @@
+
+- POS - Point Of Sale
+    - KREDİ KARTI SATIŞ CİHAZI 
+    - GIB - Gelir İdaresi Başkanlığı
+    - VUK - Vergi Usul Kanunu
+
+# GENEL
+    - Her üye iş yerinin BKM üzerinden UniqueID si vardır,  
+    - Ingenico, VeriFone gibi ünlü pos markaları vardır.
+    - POS yazılımları genellikle POS firmalrı ücretsiz olarak yaparlar,
+    - POS gün sonu almak demek bankadan son bir onay almak demektir,
+    - POS gün sonu yapılamdan yapılan işlemlerin tutarı, üye işyerlerinin hesabına ya da kartına yansımaz,
+    - POs dan gün sonu alınmaz ise yapılan işlemler finansallaşmaz,
+    - Üye iş yeri gün sonu başlatmaz ise Banka kendisi gün sonu başlatır,
+    - POS gün sonu almaz ise 
+        - Banka kapanmayan bazı batch leri bir sonraki gün otomatik olarak kapatır,
+        - Bazı bankalar batch leri kapamak için 1-7 gün verir,
+    - Pos gün sonu aynı gün iki kere alınırsa ne olur ?
+        - Bankadan bankaya iş modeli değişkenlik gösterebilir,
+        - Varsayılan davranış şekli ;
+            - Aynı gün istendiği kadar gün sonu alınabilir,
+            - Bu batch işler banka sisteminde birikirler,
+            - Bir sonraki gün topluca işleme alınırlar,
+
+     
+    - İptal -İade farklı --> Kart sisteminde;
+        - iade demek; işlemin yapıldığı pos un gün sonu yaptıktan sonra, o işlemden vazgeçilmesi demektir. Yani ürünü geri getirdiniz.
+        - iptal demek; işlemin yapıldığı pos un gün sonu yapmadan önce, o işlemden vazgeçilmesi demektir. Yani gene ürünü geri getirdiniz.
+        - Müşteri açısından hiçbir fark yoktur. Sonuçta müşteri, aldığı malı yada hizmeti geri getirir. 
+        - Otorizasyon sistemi açısından farkı vardır.
+
+    - Pos satış belgesi - Slip 
+        - Pos larda kağıt bitmiş ise yeni bir işlem yapılmaz,
+        - Pos ların başarılı işlemden sonra slip çıkarması zorunludur,
+        - Slip yazdırma işleminin bir yerinde kağıt bi ter ise ne yapılmalı,
+            - POS da 'en son işlem slip' denen menüden tekrar slip çıkarılabilir,
+            - Üye iş yeri internet-mobil uygulamasından provizyon alınıp alınmadığı kontrol edilebilir,
+            - Enson işlemin ekranda onay-red olma durumu görülür ve iş yerine güvenilir,
+            - Enson işlemi pos üzerinden iptali istenir ve işlem tekrarlanır, 
+
+    - Offline Pos cihazı - çevrimdışı
+        - Offline pos makinesi diye bir şey yoktur,
+        - POS un bazı işlemleri Offline yapması durumu vardır,
+    
+    - POS’tan geriye dönük gün sonu alma - Olsı Davranış Şekli
+        - Gün döndüğünde POS sizi günsonu almaya zorlar ve yeni işlem yaptırmaz,
+        - Pos otomatik olarak gün sonu almıştır,
+        - Uzun bir süre kapalı kalan POS batch kapalı hatası alıyordur,
+
+# POS BATCH 
+    - POS'un üzerindeki işlemleri kaydettiği bir kutu gibi düşünülebilir,
+    - POS üzerinde işlem yapıldığında işlem 1 nolu BATCH e kaydedilir,
+    - POS gün sonu alındıktan sonra BATCH sayacı arttırılır ve önceki batch silinir,
+
+
+# POS BATCH UPLOAD
+    - POS cihazı gün sonu yaptığında POS bankasına(HOST) üzerimde N tanel işlem var ve toplam Y tutarında diye özet bilgi gönderir,
+    - POS bankası kendi provizyon tablolarında bu adet ve tutar bilgisinin doğru olup olmadığını kontrol eder,
+    - Eğer bu rakamlar uyumluysa POS BATCH i kapattım diye mesaj gönderir,
+    - Uyumsuzluk durumunda Banka üzerindeki işlemleri tek tek göndermesini ister,
+    - Bu tek tek gönderim durumuna POST-BATCH-UPLOAD denir,
+    - BATCH-UPLOAD durumunda POS dan gelen bilgileri esas alır,
+    - POS dan gelen bilgileri tek tek kendi Provizyon tablorında eşleştirir,
+    - Eşleşirse tutar kontrolü yapar ve gerekliyse tutarı update eder,
+    - Eşleşmez ise Banka işlemi özel bir flag ile alır,
+
+
+# POS Gün Sonu İşlemi
+    - POS’lardan “Gün Sonu” yapmak diye bir kavram vardır. POS, o anki batch’inde yapılan 
+      tüm işlemleri bağlı olduğu bankaya bildirir.
+
+# ORTAK POS 
+    - Üye iş yerlerinin 10 tane pos yerine 1 adet pos cihazının olma durumudur,
+    - POS un üzerinde tanımlı bankaların uygulamaları var,
+    - işlem yapmadan önce hangi banka ile işlem yapılacak ise seçiliyor,
+    - Ortak POS larda POS sahibi banka diğer POS lardan bir kira bedeli alır, (kurulum ve bakım maliyeti için)    
+
+# MultiCurrency POS - Dövizli POS
+    - Birden Fazla Para birimini Destekleyen POS
+    - Türk Lirası haricinde Yabancı Para cinsinden(Dolar, Euro, Sterlin vs.) 
+      işlem yapabilen POS cihazlarına verilen isimdir.
+    - Daha çok tatil beldelerinde kullanılır
+    - 20 Dolarlık işlem Otorizasyona da 20 dolar olarak girer,
+      Eğer normal bir pos dan yapılsaydı 20 dolarlık işlem TL ye çevrilir,
+      TL karşılığı otorizasyona girer,
+    - Sanal POS üzeirnden de farklı para cinsinden ödeme alınması sağlanabilir,
+
+
+# Sanal POS 
+    - Bankalar internet üzerinden ödeme alırlar,
+
+# Cep Telefonu - POS
+    - Cep telefonumu bir kredikartı gibi kullanmak yerine --> cep telefonumu bir POS cihazı gibi kullanmak,    
+
+# POS’lardan Yapılabilen İşlemler
+    - Normal Satış - Taksitsiz Satış
+    - Taksitli Satış
+    - İptal --> POS gün sonu yapmadan bir işlem, iptal edilebilir.
+    - İade --> POS gün sonu yaptıktan sonda bir işlem, iade edilebilir.
+    - Fatura Tahsilatı
+    - Migros ParaGönder ? Araştır
+
+# PDA - Personal Digital Asistant
+    - Veri girişi için dokunmatik ekran ve kalam
+    - Sahadan bilgi toplamak için kullanılır,
+    - El terminali olarak anılırlar,
+    - otopark yazılımları, depo otomasyonu, lojistik taşımacılık, barkod etiket kullananlar, 
+      ilaç şirketleri sipariş, ecza depoları, tarafından sipariş, sıcak satış, sayaç okuma, saha satış ekibi, 
+      sayım, sipariş alma, stok giriş çıkış, barkod kalite kontrol sistemleri, park sistemi, 
+      mağazalarda ve personel takibinde kullanılır.
+    - POS cihazının üzerine PDA özelliğin eklenmesi
+
+# Unattended POS - Katılımsız POS
+    - Sabit bir geliri tahsil etmeye yarayan pos tipidir,
+    - Bu pos kullanmak için satıcı yardımına ihtiyaç yoktur,
+    - Otobüslerdeki bilet ödeme sistemlerinde kullanılan POS bu tip bir POS dur,
+
+# POS İle Yapılan İşlemlerin GİB Bildirilmesi
+    - https://www.gib.gov.tr/fileadmin/haberler/KREDI_KARTI_SATIS_CIHAZI.htm
+
+# Doktor POS 
+    - V.U.K. genel tebliğinde yer alan tüm kriterler göz önüne alınarak geliştirilen poslardır.
+    - Bu postan çıkan slipler serbest meslek makbuzu yerine geçer.​
+    - 100 tl lik işlemin X tl lik vergisi, otomatik olarak işlem tutarından kesilir ve devlete aktarılır,
+      ve pos sahibine 100-x lira ödenir.
+
+# Payment Card Industry Data Security Standart  - PCI DSS
+    - Üye işyerleri, Acquirer ve Issuer bankalara, BKM service provider lar için 
+      hassas veriyi (kartno,pin,cvv) nasıl tutacaklarını veya tutamayacaklarını açıklamak için 
+      standartlaştırılmış bir kural kümesidir,
+    - Kart numarası açık-clear şekilde hiç bir zaman tablonuzda tutmayın,
+    - Encrpt olarak tutu ve o na bir key atayın, KEY-VALUE
+    - Kart numaları konusunda, %100 PCI DSS Compliance -Uyumlu olun.
+
+# Linkler
+    - https://www.denizpos.com/ortak-pos/ortak-pos.html

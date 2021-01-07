@@ -1,0 +1,37 @@
+
+
+HTML-CSS 
+
+# Normalize.css 
+ --> Dosyanın en üstüne konulur,
+ --> npm install normalize.css -- Browser Farklılıklarını önlemek için
+ 
+# Formalize.css
+
+# SASS - SCSS
+
+- SCSS -> Sassy Cascading Style Sheets
+- SASS -> Syntactically Awesome Stylesheets
+
+- @import
+- @mixin @include
+- $variable
+  
+- 1em = 16px
+- currentcolor
+
+- emmet -> ul>li*4
+        -> ul>li*4>a+span
+		-> lorem 
+
+
+# Siteler
+
+- FOnt awesome
+- https://icomoon.io/app/#/select
+- https://getbootstrap.com/docs/5.0/layout/breakpoints/
+- https://github.com/mkg0/HEAD
+- https://dribbble.com/shots/11345153-Freebies-Cryptocurrency-Market-Dashboard
+- https://dribbble.com/shots/12594449-Banking-Dashboard
+- https://dribbble.com/shots/11117405-HRM-Skill-Management-Dashboard
+- https://dribbble.com/shots/6749580-AGDQ2020-Schedule-Redesign

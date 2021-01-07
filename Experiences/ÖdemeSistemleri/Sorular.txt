@@ -1,0 +1,5 @@
+
+1- Nakit Avans çekiminde işlem otorizasyon akışına giriyor mu ?
+   Nakit avans çekiminde otorizasyona dahil olur,
+   
+2- Üye iş yeri puanı - Banka puanı 

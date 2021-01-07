@@ -1,0 +1,77 @@
+
+
+## PL-SQL - Procedural Language / Structural Query Language 
+
+
+Oracle Server -- Oracle Server 12c - 12 Cloud-Supported   11g-12c-18c-19c
+IDE    -- sqldeveloper, pl-sql Developer, toad for oracle
+
+-- Administrator Kullanıcısının Aktifleştirilmesi
+-- Oracle Server Kurulumu
+-- Net Configuration Assistant - Network ayarları
+-- Database Configuration Assistant - Veritabanı kurulumu ve Yapılandırma
+
+
+SID -- Multiple Data file
+
+TNS (TRANSPARENT NETWORK SUBSTRATE)
+
+HOST - DESKTOP-VFUQQCP
+PORT - 1521
+
+Display Oracle Listener Status 
+lsnrctl status 
+lsnrctl stat
+
+
+https://localhost:5500/em/login
+SYS - as sysadmin - 135201
+SYSTEM - not as sysadmin - 135201
+
+
+
+DB USER -- EMRE - 135201
+
+
+------------------------------------------------------
+
+EXPORT - cmd > exp 
+IMPORT - cmd > imp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

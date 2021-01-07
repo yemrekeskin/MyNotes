@@ -1,0 +1,11 @@
+
+
+CLI - Command Line Interface
+LTS - Long Term Support
+RTS - 
+
+as seen below
+As you may have guessed by now
+corresponding variables
+but for now,
+

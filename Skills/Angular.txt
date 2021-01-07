@@ -1,0 +1,76 @@
+
+
+i18n internationalization
+backtick = altgr + ,
+
+## ANGULAR 
+
+SPA - Single Page Application
+Javascript kütüphanesi
+Front-End
+API
+
+Desktop -- ElektronJS
+Mobile -- NativeScript
+
+
+CoreModule
+FormModule
+BrowserModule
+
+
+AppModule
+
+
+{{ name }}  --> one-way binding --> String interpolation
+[(ngModel)] --> two-way binding  
+
+
+Typescript --> superset of Javascript, Transpiler, Compile-Time Error
+Browser (ES5)
+
+npm i -g typescript 
+cmd --> tsc --version
+
+ng n app-name --directory . 
+ng g m app-routing --flat --> sadece dosyayı oluşturmak için --flat diyoruz,
+
+
+Component --> Data + Template + Logic 
+
+
+Asenkron - Senkron Çağrı
+
+Observable, of --> asenkron çağrım
+
+
+
+## COMMANDS
+
+ng help
+
+ng new app-name
+
+ng serve
+ng serve --port 3000
+ng server --open
+ng server -o 
+
+
+ng generate component component-name
+ng g c component-name
+
+ng generate service service-name
+ng g s service-name
+
+
+Component	ng g component yeni-component
+Directive	ng g directive yeni-directive
+Pipe	ng g pipe yeni-pipe
+Service	ng g service yeni-service
+Class	ng g class yeni-class
+Interface	ng g interface yeni-interface
+Enum	ng g enum yeni-enum
+Module	ng g module modulum
+
+

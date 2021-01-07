@@ -1,0 +1,11 @@
+
+## NFC - Near Field Communication
+    - Bir iletişim standardı.
+    - Kullanım Alanları ; 
+        - Elektronik anahtarlar (arabalar, evler, otel odaları ve garaj kapıları için)
+        - Elektronik cüzdan olarak (cep telefonlarına ve diğer mobil cihazlara entegre olarak)
+        - Elektronik biletler (uçak, otobüs, konser ve maç biletleri)
+        - Kimlik dokümanları (hüviyet bilgilerini, şirket çalışanı bilgilerini vs. içeren kartlar)
+        - Mobil ticaret (elektronik ulaşım noktaları üzerinden alışveriş amaçlı olarak)
+    - NFC - Bluettoth Karşılaştırması
+    - Vaka --> Ödeme alan Laptop

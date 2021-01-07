@@ -1,0 +1,46 @@
+
+# Currency Codes
+# Country Codes - City Codes
+# Domain List by country
+# Language Codes
+
+
+# Swift/BIC Codes
+# Swift Message Type Lists
+
+
+# GUID Generator
+# UUID Generator
+
+# IBAN Generator
+# TCKN Generator
+# VKN Generator
+
+# Credit Card Number Generator
+
+# Phone Number - Dial Codes
+
+# TimeZone List
+
+
+
+Alternatives
+
+https://uuidgen.org/v/4
+https://www.countries-ofthe-world.com/
+https://www.freeformatter.com/
+https://binlist.org/
+https://www.bincodes.com/
+https://swifty.codes/banks/
+https://www.simlict.com/
+https://www.hesaplaa.com/
+https://bank.codes/
+https://bank-code.net/
+https://www.theswiftcodes.com/
+https://www.getcreditcardnumbers.com/
+https://saijogeorge.com/dummy-credit-card-generator/
+
+
+
+
+

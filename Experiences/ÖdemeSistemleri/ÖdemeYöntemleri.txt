@@ -1,0 +1,34 @@
+
+ # Alternatif Ödeme Yöntemleri-Sistemleri 
+	
+	# E-Wallet 
+		- Cüzdan hesabı açılır
+		- Açılan hesaba kredikartı veya banka kartı bağlanır,
+		- Daha sonra yapılan tüm alışverişler bu cüzdan aracılığıyla yapılır,
+		- Alipay, PayPal, Qiwi, Bkm Express ve Yandex Money.
+		
+	# Real-time bank transfers
+		- Online alışveriş sitelerini bankalara bağlayan bir sistemdir,
+		- Bankanın Direkt internet bankacılığına bağlanır,
+		- Otomatik doldurulmuş form çıkar 
+		- Ceptelefonuna gelen şifreyi girer ve işlemi tamamlar,
+		
+	# Prepaid - Ön-Ödemeli Kartı
+		- Bir banka hesabına bağlı değildir,
+		- Bankacılık sistemi dışında kalır,
+		- Kredi limiti de bulunmaz,
+		- Kartın üzerine yüklenen tutar kadar harcama yapılınabilir,
+		- Siz veya Başkası karta bakiye yüklemesi yapabilir,
+		- Visa/Mastercard kabul eden bütün tüm işyerlerinde kullanılabilir,
+		- Banka/Kredi Kartı kullanmak istemeyenler için uygun bir kart tipidir,
+		- Initial, Gift Cards, 
+		- KrediKartı olmayan ama internetten alışveriş yapmak isteyenler için uygundur,
+		- İki tiptir,
+			- Kullan-At  --> Hediye kartı , BIM,A101
+			- Kullan-Doldur --> 
+	
+	# Kapıda Ödeme
+		- Kapıda Nakit/KrediKartı
+		- Ödeme Kargo görevlisine yapılmaktadır,
+		- Kargo firmasına göre 5-10 TL ek ödeme yapılır,
+		- KrediKartı bilgilerini paylaşmak istemeyenler için uygun bir yöntemdir,

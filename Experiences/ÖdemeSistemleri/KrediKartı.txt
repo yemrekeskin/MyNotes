@@ -1,0 +1,172 @@
+
+### Debit-Credit Card
+
+## Kavramlar 
+
+ - BIN, Bank Identification Number - yeni adıyla IIN (issuer identification number)
+ - ISO/IEC 7812 Standartı
+ - Kredi kartı ya da banka kartının ilk 6 hanesi bilgisidir.
+ - IIN numarası üzerinde bulunduğu kart ile ilgili bilgileri temsil eder. Bunlar Kart Şeması, Kart Tipi gibi bilgilerdir.
+
+Kart Numarası  - PAN number
+
+Kart/Ödeme Şeması     --> MasterCard, Troy ve Visa, Amex(American Express),UnionPay, Discover, JCB Cards, Dinner Club International
+Kart Tipi             --> Credit/Debit Kart
+Prepaid 		      --> True/False
+Kart Alt Tipi         --> Visa debit kartlar Electron, Visa kredi kartları klasik, gold
+Kart Numarası_Uzunluk --> Genellikle 16 hanedir
+Kart Numarası_Luhn Algoritması --> True/False
+Banka Kodu            --> 
+Ülke                  -->
+Ürün Tipi             --> standart kart, sanal kart
+
+
+5412 3414 7892 6391
+
+5           --> sytem number -->  3=amex, 4=visa, 2/5=mastercard, 9=troy
+41234       --> bank number 
+541234      --> bin/ iin (issuer identification number)
+14 7892 639 --> membership number - customer number
+1           --> check digit
+
+
+ - BKM --> Bankalararası Kart Merkezi
+ - Mail Order --> Telefon/Posta Alışverişlerine 
+ - İnternet alıverişine kapama 
+ - 
+
+
+## Luhn Algoritması
+
+ - Kredikartı ve imei doğrulamak için kullanılır,
+ 
+ # METHOD-1
+ 
+	 - Örnek Kart numarası : 5412 3414 7892 6391
+	 1. Tek olan digitleri 2 ile çarpıyoruz, 
+	 2. Eğer çarpım sonucu iki haneli olursa basakları topluyoruz ve tek bir rakam elede ediyoruz
+	 3. Tüm digitleri topluyoruz,
+	 4. Eğer sonuç 10 ile bölünebilir ise geçerli kart değil ise geçersiz kartdır.
+
+	--> 5412341478926391
+	--> 5412          3414         7892         6391
+	--> (5x2)4(1x2)2 (3x2)4(1x2)2 (7x2)8(9x2)2 (6x2)3(9x2)1
+	--> (10)4(2)2    (6)4(2)2     (14)8(18)2   (12)3(18)1
+	--> 1422          6422         5892         3391
+	--> 9      +      14      +    24     +     16
+	--> 63 % 10 = 3 --> NOT VALID
+
+ # METHOD-2
+
+	Another The Luhn Formula:
+	 1. Drop the last digit from the number. The last digit is what we want to check against
+	 2. Reverse the numbers
+	 3. Multiply the digits in odd positions (1, 3, 5, etc.) by 2 and subtract 9 to all any result higher than 9
+	 4. Add all the numbers together
+	 5. The check digit (the last number of the card) is the amount that you would need to add to get a multiple of 10 (Modulo 10)
+
+	Original Number:				4	5	5	6	7	3	7	5	8	6	8	9	9	8	5	5	
+	Drop the last digit:			4	5	5	6	7	3	7	5	8	6	8	9	9	8	5		
+	Reverse the digits:				5	8	9	9	8	6	8	5	7	3	7	6	5	5	4		
+	Multiple odd digits by 2:		10	8	18	9	16	6	16	5	14	3	14	6	10	5	8		
+	Subtract 9 to numbers over 9:	1	8	9	9	7	6	7	5	5	3	5	6	1	5	8		
+	Add all numbers:				1	8	9	9	7	6	7	5	5	3	5	6	1	5	8		85
+	Mod 10:	85 modulo 10 = 5 (last digit of card)
+
+
+##  GENEL
+	- CVV - Card Verification Code/Value
+	- İlk Online işlem --> ilk temaslı işlem
+		- PIN/Şifre değişikliği yapıldığında şifreniz kartınız ile yapacağınız ilk online işlem
+		  ile kartınıza yükleencektir,
+		- Çip ile işlem veya ATM ile fiziksel bir işlem
+	- Olası itirazlarda işlem slibinde bu ifade yer alıyor ise kart sahibi 
+	  bu itirazı kaybeder, bir sonuç alamaz.
+	  PIN in gizliliği bu yüzden önemlidir. 
+	  PIN ile gerçekleşen bütün işlemler bizzat kart sahibi tarafından yapılmış gibi kabul edilir.
+
+## Sanal Kart 
+	- Fiziksel olarak basılmaz,
+	- güvenlik Kodu banka internet şubesinden görülebilir,
+
+## Offline Bakiye
+## Nakit avans çekimi de olsa her yapılan işlem provizyonda görünür,
+   Bir süre provizyondan düşecektir,
+
+## Kredi Kart Borcunu Ödememe Durumu
+	1- Kart borcunun asgari ödemesini yapılır, 
+	   100 TL borcun 20 TL asgari ödemesi kalan ana paraya faiz uygulanır,
+	   Borcu kapama durumunda toplamda 110 TL ödenir ve 10 TL banka kar eder,
+	2- Asgari ödemenin altında bir tutar ödendiğinde 
+	   kart yakın izleme durumuna alır ve borcun ödenmesi için bir ekstre dönemi daha beklenir,
+	3- Kart borcu 30 gün boyunca ödenmez ise 2 maddedeki benzer süreçler işler,
+	4- Kart borcu 60 gün boyunca ödenmez ise Kart sahibi idari takip denen bir sürece alınır,
+	   Bu durumda karta otorizasyon verilmez,
+	5- Kart borcu 90 gün boyunca ödenmez ise Kart borcu artık hukuksal yollar ile tahsil edilir,
+	6- Terkin Durumu : Borcun tahsil edilemeyeceği anlaşıldığında 
+	   borç banka zararına yazılır ve aktif tahsilat süreçlerinden kaldırılır,
+	
+
+	NOT --> Bu durumlar bankaların risk algısına göre değişkenlik gösterebilir, 
+
+## Taksit Hesaplama
+
+	- IŞLEM DETAY --> 
+		işlem tutarı : 100 TL 
+		taksit sayısı : 5
+		vade farkı tutarı : 10 TL
+
+	- BASIT YONTEM-->	
+		taksitler : 20TL anapara + 2TL vade farkı = 22TL*5 = 110TL 
+
+	- IÇ VERIMLILIK YONTEMI -->
+		1. taksit : 16TL anapara + 6TL vade farkı = 22TL
+		2. taskit : 18TL anapara + 4TL vade farkı = 22TL
+		3. taksit : 22 TL anapara  = 22TL
+
+## Cycle - Dönemİçi
+	- Kredi kartlarında bir işlemin hayat döngüsü ana olarak 3 kısımdır.
+		1-) İşleme provizyon alınır. Bu işlem provizyonda belirli bir süre 
+		    bazı iş süreçlerinin ilerlemesini ( pos gün sonu, takas yüklemesi, vs..) bekler.
+		2-) Provizyonda bekleyen işlemler dönemiçine girerler.
+		3-) Dönemiçindeki hareketler ekstreleşir ve karta borç olarak yansırlar.
+
+## Kart güvenlik Kodları
+	- MC --> CVC
+	- VISA --> CVV 
+
+	- CVV - Card Verification Code/Value	
+	- CVC2 (MasterCard), CVV2(VISA): kartlarin arka yüzünde bulunan numaranin son 3 hanesidir.
+	  Yalnizca kartlarin arkasında fiziksel olarak basılıdırlar.
+	  Moto yada Cnp ( card not present ) işlemler icin ekstra guvenlik sağlayan bir bilgidir.
+
+    - CVC (MasterCard), CVV(VISA): kartlarin manyetik alaninda bulunan ekstra bir güvenlik kodudur.
+	  Kartın manteyik şerinde gömülü bir değerdir.
+
+	- ICVV(VISA), Dynamic CVV(MasterCard): Chip üzerindeki guvenlik kodudur.
+
+## Fallback İşlem
+	- Normal şartlar altında chipli bir kart mahnetik şeritten işlem yapılmak istendiğinde,
+	  işlemi yapmaması ve 	chip okuyucuya yönlendirmesi gerekir,
+	- Chipli bir kartın chip'i kullanarak işlem yapamaması durumunda 
+	  manyetik şerit kullanılarak yapılan işleme fallback denir,
+
+## Offline PIN – Online PIN
+	- PIN: Personel Identification Number;
+	- Online PIN  --> pos-banka/banka-banka arasındaki iletişimde kullanılan kart sahibini 
+	  				  doğrulamak için bankada tutulan PIN bilgisidir.
+					  kullanıcı şifresi değildir,
+	- Offline PIN --> pos-kart arası iletişimde kullanılan kart üzerinde çakılı olan
+	  				  pin bilgisidir,
+
+	- Genelde bankadaki pin ile chip üzerindeki pin aynıdır,
+
+# Kredikartların kullanılan key ler 
+	- Keyler mesajların, PIN bilgisinin ya da PIN şifreleyen key bilgilerinin 
+	açık halde zone lar arasında (POS-banka/banka-banka/banka-bkm/..) gidip gelmemesi için kullanılır,
+
+	- Bu keyleri birkaç grup altında toplayabiliriz. 
+		1- Host ve Diğer bankalar arasındakiler, 
+		2- Host ve POS ları arasındakiler, 
+		3- Kart basımda kullanılan key ler gibi.
+	- https://emreerdem.me/2010/02/14/kart-sisteminde-tanimli-key-ler/

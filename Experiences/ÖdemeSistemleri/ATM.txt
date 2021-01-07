@@ -1,0 +1,22 @@
+
+### ATM Para Çekmek
+
+ 1. Greedy Algoritması 
+     - En az sayıda banknot verilmesini baz alır,
+	 - ATM’ nin işlem ve para saklama kapasitesi göz önünde bulundurulmuştur.
+	 
+ 2. Maximum Çeşitlilik Algoritması
+     - Para çekme işlemi sırasında kişiye tüm banknotlardan verilmesini amaçlar.
+	 - 500 TL çekim için;
+	 -  4 adet 100 TL,
+		1 adet 50  TL,
+		2 adet 20  TL,
+		1 adet 10  TL verebilir	 
+		
+ 3. Eşit Dağılım Algoritması
+     - Bu algoritma ise para çekme işleminiz sırasında ATM’ de bulunan tüm banknot çeşitlerinden mümkün olduğunca eşit sayıda vermeyi amaçlar,
+	 - 1000 TL çekim için,
+	 -  6 adet 100 TL
+		5 adet 50 TL
+		5 adet 20 TL
+		5 adet 10 TL verebilir

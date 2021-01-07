@@ -1,0 +1,65 @@
+
+--Z GENEL KAVRAMLAR
+    - Otorizasyon yönlendirme( swtich ) 
+
+--> STIP – Yerine Otorizasyon - Stand in Provision
+    - Normalde bir işleme otorizasyon Issuer banka (kart sahibi banka) tarafından verilir.
+    - Bir işlemi Türkiye’de BKM ya da yurt dışında VISA yada MC ın Issuer banka yerine onaylaması durumda 
+      gerçekleşen sürece “yerine otorizasyon verme” denmektedir.
+    - Amaç müşteri mağduriyetini önlemek. Mesela banka sisteminde geçici bir hizmet kesintisi durumunda, 
+      banka müşterileri, bu kesintiden etkilenmeden kartları belirli kurallar dahilinde ile hizmet almaya 
+      devam ederler. 
+      Burada genelde BIN bazlı bir işlem limiti kullanılmaktadır.
+    - Issuer Down - Kart sahibi banka sistemleri down olduğu durumlar
+    
+14. OTORİZASYON
+ 
+     - Banka/Kredi Kartı ile işlem yapmadan önce kartı vermiş olan kuruluştan işleme onay alınması 
+	 - Proziyon Alma 
+	 - Bir tür yetkilendirme işlemidir
+	 - Kart ihraç eden banka 
+	 - Otorizasyonun temel amacı güvenliği sağlamak ve riski minimize etmek
+		- Limitinin müsait olup olmadığı kontrolü
+		- Kartın kayıp-çalıntı kaydının olup olmaması
+		- POS ve ATM terminallerinde kartın cihaza yerleştirilmesiyle otorizasyon online olarak alınır,
+	 - Otorizasyon Tarafları
+		 - Kartı hamili (cardholder),
+		 - Kartı ihraç eden banka (hamile kartı veren banka-issuer),
+		 - Üye işyeri (harcama yapılan iş yeri-Merchant),
+		 - Karta harcama yetkisi veren banka (üye iş yerindeki POS(ya da ATM) terminalinin bağlı bulunduğu banka-aquirer),
+		 - Bankalararası Kart Merkezi (BKM),
+		 - Visa, Master Card, Amex ve JCB gibi uluslararası kart işletim sistem sağlayıcılardır 
+		 
+	 - Yurtiçi İşlemler  --> BKM
+	 - Yurtdışı İşlemler --> BKM + Visa/Master
+	     - POS/ATM = international , Kart = local
+		 - POS/ATM = local ,         Kart = international
+		 
+	 - İşlem detayını içeren ve işyeri tarafından kart hamilinin bankasına, limit/hesap müsaitliği başta olmak üzere
+ 	   diğer unsurları da değerlendirme olanağı sağlayan onay prosedürüne otorizasyon diyoruz,
+	   
+	 - Otorizasyon İşlem Tipleri
+		- PreAuth
+			- Karttan para çekmeyen ama tutar kadar bloke koyan işlemdir,
+			- Karttan provizyon alınır ve Kart limiti üye iş yeri adına bloke edilir,
+			- Kredi Kartı sahibinin limiti provizyon tutarı kadar azalır,
+			
+		- PostAuth --> İşyeri onayı
+			- Provizyon alınmış işlemi onaylamak ve para transferini gerçekleştirmek için kullanılır,
+			- Provizyon onaylandığında gün sonunda işlem muhasebeleşerek işyeri hesabına/kredikartına yansır,
+			- Provizyona onay verilmez ise kredi kartına konan bloke 7-10 gün içerisinde kaldırılır,
+		
+		- Auth --> Satış
+		- Provizyon İptali (Void)
+			- Kredi Kartı limitine konan bloke serbest bırakılır,
+		- İşyeri Onayı İptali (Void)
+		- Satış iptali (Void)
+		- İade (Credit)
+
+	 - Ön Otorizasyon  - PreAuthorization
+	 	- Kredi kartından ödeme güvencesi almak
+		- 100 TL ön provizyon alındığında 100TL lik bloke konur,
+		- İş yerinden ön provizyon kapaması olmadan bloke kaldırılmaz,
+		- Kapama gelmediği zaman bir müddet sonra bloke kalkar,
+		- İş yeri ön provizyonu kapar ise 100TL çekilir, işlem böylelikle finansal değer kazanır,
+		- 

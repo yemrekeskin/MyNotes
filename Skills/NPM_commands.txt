@@ -1,0 +1,107 @@
+
+NPM Commands
+https://docs.npmjs.com/cli-documentation/
+
+
+npm init
+npm init -y 
+npm init --yes
+
+npm i
+npm install 
+
+
+npm install -D 
+npm install --save-dev
+
+npm install -E
+npm install --save-exact 
+
+npm docs
+npm docs [package]
+
+npm install [package] --no-save     -> To install package temporarily and not add it to the dependencies list:
+
+npm -g uninstall <name> --save
+
+npm install 						-> Install dependencies
+npm install [package]       		-> Install package
+npm install --save-dev [package]    -> Install dev package
+npm uninstall [package]             -> Uninstall package
+npm uninstall --save-dev [package]  -> Uninstall dev package
+npm update							-> Update
+npm update [package]  				-> Update package
+npm install --global [package] 	    -> Global install package
+npm uninstall --global [package]	-> Global uninstall package
+
+npm --help
+npm -h
+
+npm --version
+npm -v
+
+npm view [package]					-> You can get the latest (or any) package info with the view command.
+
+npm -l
+npm --help
+
+
+npm ls 
+
+npm login
+npm logout
+
+npm list -g --depth 0
+npm list -g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+YARN Commands
+
+yarn 								-> Install dependencies
+yarn add [package]       			-> Install package
+yarn add --dev [package]    		-> Install dev package
+yarn remove [package]             	-> Uninstall package
+yarn remove [package]  				-> Uninstall dev package
+yarn upgrade						-> Update
+yarn upgrade [package] 				-> Update package
+yarn global add [package]	    	-> Global install package
+yarn global remove [package]		-> Global uninstall package
+
+
+
+## Windows Command-Line 
+
+
+set --> to list system environment variables 
+
+
+
+
+
+
+
+
+
+
