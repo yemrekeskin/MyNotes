@@ -1,0 +1,5 @@
+- Proje Yönetimi
+- Backlog Management 
+- SonarQube
+- Dynatrace - PROD izlem
+- 

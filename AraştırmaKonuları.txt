@@ -1,0 +1,15 @@
+# Araştırma Konuları
+
+- Database/Oracle
+    - ExaData
+    - Anlık Data Teknik Tasarım
+    - T-1 Datası
+    - partition
+    - DbLink
+    - QlikSense
+    - Arşivleme - shrink
+    - Golden Gate
+    - ODS - Operational Data Store 
+
+- Pentest
+- 

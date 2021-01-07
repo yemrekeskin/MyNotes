@@ -4,6 +4,9 @@ CLI - Command Line Interface
 LTS - Long Term Support
 RTS - 
 
+SLA - Service Level Agreement
+MKY - 
+
 as seen below
 As you may have guessed by now
 corresponding variables

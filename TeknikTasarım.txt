@@ -1,0 +1,9 @@
+
+- Rapor Tasarımı 
+    - Rapor Seviyeleri - Seviye 1-2-3
+    - Özet Raporlar
+    - Anlık Raporlar - Runtime
+    - Trend Raporları
+    
+
+    - 

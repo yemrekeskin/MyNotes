@@ -1,0 +1,15 @@
+git reset HEAD -- .
+
+
+git pull origin dev
+
+
+git branch
+git status 
+git checkout -b feature-branch
+git commit -m ""
+git reset --hard 
+
+
+dev - int - uat - preprod(release) - prod(master)
+ 
