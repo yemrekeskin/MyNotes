@@ -1,9 +1,8 @@
-
+## ANGULAR 
 
 i18n internationalization
 backtick = altgr + ,
 
-## ANGULAR 
 
 SPA - Single Page Application
 Javascript kütüphanesi
@@ -17,8 +16,6 @@ Mobile -- NativeScript
 CoreModule
 FormModule
 BrowserModule
-
-
 AppModule
 
 
@@ -44,7 +41,6 @@ Asenkron - Senkron Çağrı
 Observable, of --> asenkron çağrım
 
 
-
 ## COMMANDS
 
 ng help
@@ -56,6 +52,10 @@ ng serve --port 3000
 ng server --open
 ng server -o 
 
+ng test 
+ng lint 
+ng serve 
+ng generate --help 
 
 ng generate component component-name
 ng g c component-name
@@ -64,7 +64,7 @@ ng generate service service-name
 ng g s service-name
 
 
-Component	ng g component yeni-component
+Component	ng g component yeni-component --> @Input, @Output, EventEmitter , ViewChild  
 Directive	ng g directive yeni-directive
 Pipe	ng g pipe yeni-pipe
 Service	ng g service yeni-service
@@ -72,5 +72,19 @@ Class	ng g class yeni-class
 Interface	ng g interface yeni-interface
 Enum	ng g enum yeni-enum
 Module	ng g module modulum
+
+# Konular 
+
+- Shared Services 
+- Behaviour Subject 
+- parent-child-sblings 
+- Shared Module,
+- Feature Module 
+- Core Module - Services 
+
+
+- Typescript 
+- Rxjs
+- Promise --> resolved,rejected --> callback 
 
 

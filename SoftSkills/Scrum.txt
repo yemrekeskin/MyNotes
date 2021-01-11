@@ -1,0 +1,22 @@
+
+- Retro Maddeleri 
+    - Bağımlılık ve Takip Konuları 
+    - Kişi bazlı ilerlenmesi, know-how ı dağıtmak
+    - Yan UG(Uygualama Geliştirme) ekipleri ile daha yakın çalışmak
+    - İlk önce entegre olunacak konuları önceliklendirip, daha hızlı çözümlemek
+    - Entegre olunacak işler ile ilgili takip için mail yerine haftada bir sabit bir statü toplantısı yapmak
+    - Büyük bir entegrasyon konusu var ise sıkı takip, teknik tasarım yapılmalı, el sıkışılmalı
+    - Definition Of Done - Genişletilmesi ve tanımlanması
+    - Kalite Konularının eklenmesi
+    - Teknik borçların kapatılması
+    - Daha iyi bir koordinasyon için yan ekip (örn: outsource ekip) ile çalışma yönteminin belirlenmesi,
+    - Sirkulasyon olmamasını sağlamak, projenin başından bitişine kadar aynı ekip ile gitmek
+    - Unit-Test yapılması
+    - SonarQube bulgularının eritilmesi 
+    - Code-Review -> log yazmak comments, kullanılmayan kodlar 
+    - Bir ekip portalı oluşturup dokümantasyon hazırlamak
+    - Teknik kararların birlikte alınması
+    - Rework oranının azaltılması
+    - Yönetilebilir/Yönetilmez nokatada mıyız ?
+    - Bireysel Geliştirmeyi daha Colloborative hale getirebiliriz,
+    

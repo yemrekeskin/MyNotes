@@ -1,0 +1,16 @@
+
+- Rapor Tasarımı 
+    - Rapor Seviyeleri - Seviye 1-2-3
+    - Özet Raporlar
+    - Anlık Raporlar - Runtime
+    - Trend Raporları
+    - GÜnlük / 3 Günlük /3 Aylık data
+    - Rapor Sorguları 
+    - Rapor Servisleri
+    - BO Report - Business Object
+    
+    - Raporların ana sistemi etkilememesi için varolan bir tabloya yazılıp oradan anlık raporların alınmasının sağlanması
+    - Anlık Raporlar için View kullanılması
+    - Sorgu çekilen kolonlarda index olup olmadığı
+    - Oracle ise fonksiyonların ve view in aynı package içerisinde yer alınması performansı arttırır,
+

@@ -5,7 +5,19 @@ LTS - Long Term Support
 RTS - 
 
 SLA - Service Level Agreement
-MKY - 
+MKY - Merkezi Kimlik Yönetimi
+Vulnerability - Açıklık
+Not only product but also process 
+Zero-Trust 
+Countermeasure --> Tedbir 
+Risk --> Money/Reputation 
+NaN --> Not a Number 
+
+
+- StraightForward - simple, basic, easy
+- overwhelm 
+- frustration - disappointment, defeat 
+
 
 as seen below
 As you may have guessed by now
