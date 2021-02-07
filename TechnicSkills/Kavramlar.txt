@@ -1,0 +1,20 @@
+- Teknik Borç - Technic Debt 
+- Code Coverage --> Yani kodun hiç bir yeri için Test yazılmamış
+
+
+- Kokan Kod - Code Smells 
+Tekrar eden kod parçaları(Duplicated Code)
+Anlaşılması güç uzun metod gövdeleri
+Birden çok şeyi yapmaya çalışan büyük sınıflar(God Object)
+Çok sayıda parametre
+Birden fazla yerde tekrar eden Switch ifadeleri
+Attığı taş kurbayı ürkütmez felsefesindeki tembel sınıflar (Lazy Class)
+Kodun ne yaptığını anlatan yorum satırları(Bu kısım her zaman tartışmaya açık sanırım)
+
+- Tools 
+    - SonarQube - SonarLint in CI/CD - CI hattı ile entegre olabilen merkezi bir statik kod analiz aracı
+    - Cast in build time 
+
+    - İzleme - Open APM ve HP Diagnostics
+    - Kalite için SonarQube
+    - Güvenlik açıkları için fortify 

@@ -1,6 +1,4 @@
-
-
-HTML-CSS 
+SCSS 
 
 # Normalize.css 
  --> Dosyanın en üstüne konulur,
@@ -24,6 +22,36 @@ HTML-CSS
         -> ul>li*4>a+span
 		-> lorem 
 
+
+# FlexBox Container 
+    - display: flex 
+
+    - Kapsayıcı -> container a verilir,
+        - flex-direction: row(default)= yanyana dizilir, 
+        - flex-wrap: wrap nowrap wrap-reverse  -- birden fazla satıra geçebilirsin,
+        - flex-flow: row nowrap  -> combine of firection and wrap 
+
+        - justify-content: flex-start flex-end center space-around space-between space-evenly 
+        - align-items: 
+        - align-content: bu atandığında align-items yazmanıza gerek yok, birden fazla satır olduğunda kullanılıyor,
+
+    - Eleman -> elemana verilir, 
+        - align-self : flex-start , flex-end - kutunun kendisinin hizasını değiştirir,
+        
+        - flex-grow: boşukları değerlendir, kutucuğu genişlet
+        - flex-shrink: boşukları değerlendir, kutucuğu daralt 
+        - order -> kutucukların sıralamasın varsayılan olarak 0 
+
+        - flex-basis: 
+        - flex: -> combine of flex-grow, flex-shrink, flex-basis 
+        
+
+    - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    - http://flexbox.help/
+
+    -vh -- viewport height -- görüntülenen alanın yüksekliği
+    -vw -- viewport weight -- görüntülenen alanın genişliği
+    - 1em -- font-size kadar 
 
 # Siteler
 

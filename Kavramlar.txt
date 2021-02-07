@@ -14,11 +14,12 @@ Risk --> Money/Reputation
 NaN --> Not a Number 
 
 
-- StraightForward - simple, basic, easy
-- overwhelm 
-- frustration - disappointment, defeat 
 
 
+
+StraightForward - simple, basic, easy
+overwhelm 
+frustration - disappointment, defeat 
 as seen below
 As you may have guessed by now
 corresponding variables

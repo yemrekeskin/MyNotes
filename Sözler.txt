@@ -4,3 +4,8 @@
 - Kötü olandan kaçmak yerine, iyi olana koşmak üzerine düşün,
 - Hiç bir risk almazsanız hiç bir zaman büyük kazanamazsın,
 - Büyüme potansiyeli olduğu için katmanlanır ve mimari tasarım yapılır,
+
+
+- hata yapma toleransının kabul edilebilir sınırlarını da iyi belirlemek gerekiyor.
+- Yazılımcıların hata yapmalarına müsaade etmek gelişimi destekleyen en önemli unsurdur. Bu hatalardan ders çıkartıldığı müddetçe.
+- Her Şeyin Farkında Olmalıyız (İzleme, Erken Tedbir ve Otomatikleştirme)
